@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ورود به سایت</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> لطفاً رمز عبور را وارد کن</h1>
+        <form method="POST">
+            <input type="password" name="password" placeholder="رمز عبور">
+            <button type="submit">ورود</button>
+        </form>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
